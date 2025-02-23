@@ -86,6 +86,7 @@ class Tree:
         def push(t):
             if t:
                 file.append(t)
+                
         push(self)
         
         while len(file) != 0:
