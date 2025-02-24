@@ -1,4 +1,5 @@
 import binary_tree as bt
+import smtree as sm
 
 A = bt.random_tree(5)
 # A = bt.MEmpty()
