@@ -36,7 +36,22 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
                 return self.right_son().mem(x)
         
         def pop_max(self):
-            ...
+            
+            if self.empty():
+                return None
+            
+            if self.right_son().empty():
+                max_val = self.data()
+                if self.left_son().empty():
+                    self.set_empty()
+                else:
+                    ...
+        
+        def _replace(self, node):
+            """
+            Méthode permettant de remplacer
+            le noeud courant par un noeud donné
+            """
         
         def remove(self, x):
             ...
