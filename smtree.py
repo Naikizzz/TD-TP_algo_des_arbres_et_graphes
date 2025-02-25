@@ -35,6 +35,9 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
             else:
                 return self.right_son().mem(x)
         
+        def pop_max(self):
+            ...
+        
         def remove(self, x):
             ...
         
