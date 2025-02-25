@@ -19,9 +19,9 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
             
             if self.empty():
                 self.set_data(x)
-            elif(x < self.data()):
+            elif(key(x) < key(self.data())):
                 self.left_son().insert(x)
-            elif(x > self.data()):
+            elif(key(x) > key(self.data())):
                 self.right_son().insert(x)
             
         def mem(self, x):
