@@ -9,7 +9,7 @@ from binary_tree import *
 
 def MakeSMTree(key=lambda x:x, val=lambda x:x):
 
-    class SMTree(MTree):
+    class SMTree(MEmpty):
         
         def empty(self):
             
