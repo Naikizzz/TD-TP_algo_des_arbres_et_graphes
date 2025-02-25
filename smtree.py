@@ -28,9 +28,9 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
             
             if self.empty():
                 return False
-            if x == self.data():
+            if key(x) == key(self.data()):
                 return True
-            elif x < self.data():
+            elif key(x) < key(self.data()):
                 return self.left_son().mem(x)
             else:
                 return self.right_son().mem(x)
