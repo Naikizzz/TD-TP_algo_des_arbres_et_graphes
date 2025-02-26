@@ -63,5 +63,13 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
         def remove(self, x):
             ...
         
-        def check():
-            ...
+        def check(self, mini=None, maxi=None):
+            
+            if self.empty() : return True
+            if mini != None and self.data() < mini: return False
+            if maxi != None and self.data() > maxi: return False
+            
+            return (self.left_son().check(mini, self.data()) and
+            self.right_son().check(self.data(), maxi))
+            
+            
