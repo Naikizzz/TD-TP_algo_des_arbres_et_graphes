@@ -143,7 +143,14 @@ class MTree(Tree):
         """change le fils droit d'un noeud et rend l'arbre non vide si il l'était"""
         assert isinstance(right_son, self.MTree)
         self.set_node()
-        self._right_son = right_son     
+        self._right_son = right_son    
+    
+    def set_parent(self, new_node):
+        """Remplace le nœud courant par un autre"""
+        self.set_data(new_node.data())
+        self.set_left_son(new_node.left_son())
+        self.set_right_son(new_node.right_son())
+
            
 class MEmpty(MTree,Empty): 
     """Constructeur pour un arbre vide mutable"""
