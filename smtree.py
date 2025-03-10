@@ -69,7 +69,7 @@ def MakeSMTree(key=lambda x:x, val=lambda x:x):
             if mini != None and self.data() < mini: return False
             if maxi != None and self.data() > maxi: return False
             
-            return (self.left_son().check(mini, self.data()) and
-            self.right_son().check(self.data(), maxi))
+            return (self.left_son().check(mini, key(self.data())) and
+            self.right_son().check(key(self.data()), maxi))
             
             
