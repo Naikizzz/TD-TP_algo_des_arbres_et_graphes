@@ -23,7 +23,7 @@ def MakeSMTree(cmp= lambda x, y:0 if x == y else 1 if x <= y else -1,
         def find(self,k):
             """return value associated to key k or None if absent"""
             if self.empty(): return None
-            if c := cmp(k, key(self.data())): return val(self.data())
+            if (c := cmp(k, key(self.data()))) == 0: return val(self.data())
             return (self.left_son() if c > 0 else self.right_son()).find(k)
         
         def _popmin(self,set_parent):
