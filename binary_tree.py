@@ -135,13 +135,13 @@ class MTree(Tree):
         
     def set_left_son(self,left_son):
         """change le fils gauche d'un noeud et rend l'arbre non vide si il l'était"""
-        assert isinstance(left_son, self.MTree)
+        assert isinstance(left_son, MTree)
         self.set_node()
         self._left_son = left_son       
     
     def set_right_son(self,right_son):
         """change le fils droit d'un noeud et rend l'arbre non vide si il l'était"""
-        assert isinstance(right_son, self.MTree)
+        assert isinstance(right_son, MTree)
         self.set_node()
         self._right_son = right_son    
     

@@ -47,3 +47,8 @@ dico_tree.insert((8,"Teko"))
 
 print("Test de recherche, retour de la valeur de la clé k")
 print(dico_tree.find(5))
+print(dico_tree.find(9))
+
+print("Test de suppression dans un arbre, arbre avant ", tree)
+tree.remove(4)
+print("Arbre après", tree)
